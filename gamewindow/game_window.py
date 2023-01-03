@@ -3,7 +3,7 @@ import tkinter as tk
 from . import canvas_constants as cnvs
 
 # FUTURE FEATURE: More than one dificulty size. Smaller is harder. Then data persistence
-WINDOW_SIZE = '1000x1000'
+WINDOW_SIZE = '800x1000'
 WINDOW_COLOR = 'grey'
 
 score = 0
@@ -35,7 +35,7 @@ canvas = tk.Canvas(window,
                    relief=cnvs.GAME_RELIEF,
                    width=cnvs.GAME_WIDTH)
 
-canvas.place(x=500, y=100,anchor='e')
+canvas.place(x=500, y=300, anchor='e')
 #
 # canvas.grid(row=0, column=5, padx=50, pady=2, sticky='E')
 #
