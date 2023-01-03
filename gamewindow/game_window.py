@@ -4,6 +4,7 @@ from . import canvas_constants as cnvs
 
 # FUTURE FEATURE: More than one dificulty size. Smaller is harder. Then data persistence
 WINDOW_SIZE = '1000x1000'
+WINDOW_COLOR = 'grey'
 
 score = 0
 high_score = 0
@@ -11,13 +12,16 @@ high_score = 0
 window = tk.Tk()
 window.geometry(WINDOW_SIZE)
 window.title('Shariq\'s Snake Game')
+window.configure(bg='grey')
 
 # window.resizable(False, False) # Main # Change this at some point
 # window.resizable(True, True)  # TEST
 
 score_label = tk.Label(window, text=f'SCORE: {score}\n')
                                     #f'HIGH SCORE: {high_score}')
+score_label.config(bg=WINDOW_COLOR)
 high_score_label = tk.Label(window, text=f'HIGH SCORE: {high_score}')
+high_score_label.config(bg=WINDOW_COLOR)
 
 #score_label.grid(row=0, column=0, columnspan=2, pady=0, sticky='W')
 #high_score_label.grid(row=1, column=0, columnspan=2, pady=0, sticky='W')
@@ -31,7 +35,7 @@ canvas = tk.Canvas(window,
                    relief=cnvs.GAME_RELIEF,
                    width=cnvs.GAME_WIDTH)
 
-canvas.place(anchor='e')
+canvas.place(x=500, y=100,anchor='e')
 #
 # canvas.grid(row=0, column=5, padx=50, pady=2, sticky='E')
 #
