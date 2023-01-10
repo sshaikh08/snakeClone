@@ -1,0 +1,8 @@
+NEW FEATURES
+
+1) Add difficulties
+    Corresponding code:
+    # valid_difficulties = {'easy', 'medium', 'hard'}
+    # idifficulty.lower() not in valid_difficulties:
+    #    raise ValueError("results: status must be one of %r." % valid_difficulties)
+2)
